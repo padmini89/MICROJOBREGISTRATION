@@ -15,40 +15,40 @@ if(isset($_POST['submit'])){
 
 	// sms code here//
 }
-// if(isset($_POST['sendotp'])){
+if(isset($_POST['sendotp'])){
 	
 	
-// 	$username = "pad35mini@gmail.com";
-// 	$hash = "43f8fa0562859fff901f7a7c63e52e4fc7c236de44e245e91a2d854f9c7a925d";
-// 	$test = "0";
-// 	$sender = "TXTLCL-microjob"; // This is who the message appears to be from.
-// 	$numbers = $_POST['contact']; // A single number or a comma-seperated list of numbers
-// 	$otp = mt_rand(10000, 99999);
-// 	setcookie("otp",$otp);
-// 	$message = "Hello " . $_POST['name'] . " This is your OTP: " . $otp;
+ 	$username = "pad35mini@gmail.com";
+ 	$hash = "43f8fa0562859fff901f7a7c63e52e4fc7c236de44e245e91a2d854f9c7a925d";
+ 	$test = "0";
+ 	$sender = "TXTLCL-microjob"; // This is who the message appears to be from.
+ 	$numbers = $_POST['contact']; // A single number or a comma-seperated list of numbers
+ 	$otp = mt_rand(10000, 99999);
+ 	setcookie("otp",$otp);
+ 	$message = "Hello " . $_POST['name'] . " This is your OTP: " . $otp;
 
-// 	// 612 chars or less
-// 	// A single number or a comma-seperated list of numbers
-// 	$message = urlencode($message);
-// 	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
-// 	$ch = curl_init('http://api.textlocal.in/send/?');
-// 	curl_setopt($ch, CURLOPT_POST, true);
-// 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-// 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// 	$result = curl_exec($ch); // This is the result from the API
-// 		echo("otp sent succefully");
-// 	curl_close($ch);
-// }
-// if(isset($_POST['verifyotp'])){
-// 	$verotp=$_POST['otp'];
-// 	if($verotp==$_COOKIE['otp']){
-// 		echo("verified succesfully");
+ 	// 612 chars or less
+ 	// A single number or a comma-seperated list of numbers
+ 	$message = urlencode($message);
+ 	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+ 	$ch = curl_init('http://api.textlocal.in/send/?');
+ 	curl_setopt($ch, CURLOPT_POST, true);
+ 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+ 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+ 	$result = curl_exec($ch); // This is the result from the API
+ 		echo("otp sent succefully");
+ 	curl_close($ch);
+ }
+if(isset($_POST['verifyotp'])){
+	
+ 	$verotp=$_POST['otp'];
+ 	if($verotp==$_COOKIE['otp']){
+ 		echo("verified succesfully");
 
-// 	}else{
-// 		echo("otp is wrong ");
-// 	}
-
-// }
+ 	}else{
+ 		echo("otp is wrong ");
+ 	}
+}
 
 ?>
 <!DOCTYPE html>
